@@ -36,6 +36,8 @@ class ArticlesDownloaderThreadClass(threading.Thread):
                 self.logger.Log('Error', 'in downloading for ' + row['link'])
                 self.logger.Log('Error', str(e))
 
+        self.logger.Log('Info' , 'Thread work finished for  name ' + self.name + ' and id '+ str(self.threadId))
+
         return
 
 
