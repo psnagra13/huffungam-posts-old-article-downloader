@@ -3,7 +3,7 @@ from Utilities.Logger import LoggerClass
 from Utilities.UtilFunctions import *
 from Utilities.ArticlesDownloaderThread import ArticlesDownloaderThreadClass
 
-data_path = 'data/news-category-dataset/5'
+data_path = 'data/news-category-dataset/2'
 
 STANFORD_RESOURCES = {
         'english.all.3class.distsim.crf.ser.gz': 'Resources/stanford-ner/english.all.3class.distsim.crf.ser.gz',
