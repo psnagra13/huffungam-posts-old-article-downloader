@@ -9,7 +9,7 @@ STANFORD_RESOURCES = {
         'english.all.3class.distsim.crf.ser.gz': 'Resources/stanford-ner/english.all.3class.distsim.crf.ser.gz',
         'stanford-ner.jar': 'Resources/stanford-ner/stanford-ner.jar'
     }
-NUMBER_OF_THREADS = 20
+NUMBER_OF_THREADS = 50
 
 logger = LoggerClass()
 
@@ -17,6 +17,10 @@ logger = LoggerClass()
 logger.Log('Info', 'run.py started')
 
 data = getData2(data_path, logger)
+print(len(data))
+data= data[7700:]
+print(len(data))
+
 divided_lists = divideList(NUMBER_OF_THREADS, data, logger)
 
 threads_list = []
