@@ -9,7 +9,7 @@ STANFORD_RESOURCES = {
         'english.all.3class.distsim.crf.ser.gz': 'Resources/stanford-ner/english.all.3class.distsim.crf.ser.gz',
         'stanford-ner.jar': 'Resources/stanford-ner/stanford-ner.jar'
     }
-NUMBER_OF_THREADS = 10
+NUMBER_OF_THREADS = 20
 
 logger = LoggerClass()
 
