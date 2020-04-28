@@ -1,4 +1,5 @@
 import json
+import ast
 
 def getData(data_path, logger):
     f = open(data_path, "r")
@@ -7,6 +8,25 @@ def getData(data_path, logger):
     cat_count = {}
     for row in raw_data:
         temp = json.loads(row)
+        data.append(temp)
+        category = temp['category']
+        if category in cat_count:
+            cat_count[category]+=1
+        else:
+            cat_count[category]=1
+
+
+    logger.Log('Info', str(cat_count))
+    logger.Log('Info', 'Number of links found : '+ str(len(data)))
+    return data
+
+def getData2(data_path, logger):
+    f = open(data_path, "r")
+    raw_data = f.read().split('\n')
+    data = []
+    cat_count = {}
+    for row in raw_data:
+        temp = ast.literal_eval(row)
         data.append(temp)
         category = temp['category']
         if category in cat_count:

@@ -3,7 +3,7 @@ from Utilities.Logger import LoggerClass
 from Utilities.UtilFunctions import *
 from Utilities.ArticlesDownloaderThread import ArticlesDownloaderThreadClass
 
-data_path = 'data/news-category-dataset/5'
+data_path = 'data/not_downloaded'
 
 STANFORD_RESOURCES = {
         'english.all.3class.distsim.crf.ser.gz': 'Resources/stanford-ner/english.all.3class.distsim.crf.ser.gz',
@@ -16,7 +16,7 @@ logger = LoggerClass()
 
 logger.Log('Info', 'run.py started')
 
-data = getData(data_path, logger)
+data = getData2(data_path, logger)
 divided_lists = divideList(NUMBER_OF_THREADS, data, logger)
 
 threads_list = []
